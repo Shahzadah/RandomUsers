@@ -1,9 +1,10 @@
-package com.checkfer.randomusers
+package com.checkfer.randomusers.ui.userList
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.checkfer.randomusers.R
 
-class MainActivity : AppCompatActivity() {
+class UserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
