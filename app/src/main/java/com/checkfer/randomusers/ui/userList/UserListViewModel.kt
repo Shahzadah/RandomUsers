@@ -1,7 +1,9 @@
 package com.checkfer.randomusers.ui.userList
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class UserListViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class UserListViewModel @Inject constructor() : ViewModel() {
 }

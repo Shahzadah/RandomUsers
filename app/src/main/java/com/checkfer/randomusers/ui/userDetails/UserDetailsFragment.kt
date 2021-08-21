@@ -1,26 +1,27 @@
 package com.checkfer.randomusers.ui.userDetails
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.checkfer.randomusers.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.checkfer.randomusers.databinding.FragmentUserDetailsBinding
 
 class UserDetailsFragment : Fragment() {
 
-    private lateinit var viewModel: UserDetailsViewModel
+    private lateinit var binding: FragmentUserDetailsBinding
+    private val viewModel: UserDetailsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_user_details, container, false)
+    ): View {
+        binding = FragmentUserDetailsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(UserDetailsViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 }
