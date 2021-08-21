@@ -21,5 +21,9 @@
         android:label="@string/userdetails_fragment"
         tools:layout="@layout/fragment_user_details">
 
+        <argument
+            android:name="user"
+            app:argType="com.checkfer.randomusers.data.model.User" />
+
     </fragment>
 </navigation>

@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">RandomUsers</string>
+    <string name="app_name">Random Users</string>
     <string name="userlist_fragment">UserList Fragment</string>
     <string name="userdetails_fragment">UserDetails Fragment</string>
+    <string name="random_users_list">Random Users List</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="profile_image_width">72dp</dimen>
+    <dimen name="profile_image_height">72dp</dimen>
+    <dimen name="margin_user_list_item">8dp</dimen>
+    <dimen name="padding_user_list_item">16dp</dimen>
+    <dimen name="margin_image_and_name">16dp</dimen>
+</resources>
