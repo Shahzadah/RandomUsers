@@ -17,9 +17,9 @@ class UserListViewHolder(
 
     fun bind(user: User) {
         binding.textViewName.text = user.name.formattedName()
-        binding.textViewAddress.text = user.location.formattedLocation()
+        binding.textViewLocation.text = user.location.formattedLocation()
 
-        Glide.with(binding.imageViewProfilePic.context)
+        Glide.with(binding.imageViewProfilePic)
             .load(user.picture.medium)
             .placeholder(R.drawable.image_placeholder)
             .error(android.R.drawable.stat_notify_error)

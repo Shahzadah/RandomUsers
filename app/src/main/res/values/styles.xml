@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="name">
+        <item name="android:textSize">@dimen/name_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="button_call_email">
+        <item name="android:paddingStart">@dimen/padding_call_email_button</item>
+        <item name="android:paddingEnd">@dimen/padding_call_email_button</item>
+        <item name="android:background">@color/purple_500</item>
+    </style>
+
+</resources>

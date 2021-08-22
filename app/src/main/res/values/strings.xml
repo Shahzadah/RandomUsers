@@ -3,4 +3,6 @@
     <string name="userlist_fragment">UserList Fragment</string>
     <string name="userdetails_fragment">UserDetails Fragment</string>
     <string name="random_users_list">Random Users List</string>
+    <string name="call">Call</string>
+    <string name="email">Email</string>
 </resources>

@@ -7,4 +7,11 @@
     <dimen name="margin_user_list_item">8dp</dimen>
     <dimen name="padding_user_list_item">16dp</dimen>
     <dimen name="margin_image_and_name">16dp</dimen>
+    <dimen name="padding_user_details">8dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="profile_image_large_width">300dp</dimen>
+    <dimen name="profile_image_large_height">300dp</dimen>
+    <dimen name="name_textsize">16sp</dimen>
+    <dimen name="padding_call_email_button">30dp</dimen>
+
 </resources>

@@ -30,10 +30,11 @@
 
         <TextView
             android:id="@+id/textViewName"
+            style="@style/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_image_and_name"
-            app:layout_constraintBottom_toTopOf="@id/textViewAddress"
+            app:layout_constraintBottom_toTopOf="@id/textViewLocation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/imageViewProfilePic"
@@ -42,7 +43,7 @@
             tools:text="Name" />
 
         <TextView
-            android:id="@+id/textViewAddress"
+            android:id="@+id/textViewLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_image_and_name"
@@ -52,7 +53,7 @@
             app:layout_constraintStart_toEndOf="@id/imageViewProfilePic"
             app:layout_constraintTop_toBottomOf="@id/textViewName"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:text="address" />
+            tools:text="location" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
