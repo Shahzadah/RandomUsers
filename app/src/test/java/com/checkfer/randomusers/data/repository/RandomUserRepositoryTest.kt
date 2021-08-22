@@ -9,6 +9,7 @@ import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.mockk
+import io.mockk.verify
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
@@ -41,22 +42,36 @@ class RandomUserRepositoryTest {
 
     @Test
     fun `verify listUser when fetchRandomUsers call is success`() = runBlocking {
+        //Arrange
         val listUser: List<User> = listOf()
         val response = mockk<RandomUserResponse>()
         every { response.results } returns listUser
         coEvery { apiEndpoint.fetchRandomUsers() } returns Response.success(response)
+        val successCallback = mockk<(List<User>) -> Unit>()
+        val errorCallback = mockk<(String) -> Unit>()
+        every { successCallback.invoke(any()) } answers {}
+        every { errorCallback.invoke(any()) } answers {}
 
-        repository.fetchRandomUsers(onSuccess = {
-            assert(it == listUser)
-        }, onError = { })
+        //Act
+        repository.fetchRandomUsers(successCallback, errorCallback)
+
+        //Assert
+        verify { successCallback.invoke(listUser) }
     }
 
     @Test
     fun `verify error message when fetchRandomUsers call is failed`() = runBlocking {
+        //Arrange
         coEvery { apiEndpoint.fetchRandomUsers() } throws RuntimeException("Timeout error")
+        val successCallback = mockk<(List<User>) -> Unit>()
+        val errorCallback = mockk<(String) -> Unit>()
+        every { successCallback.invoke(any()) } answers {}
+        every { errorCallback.invoke(any()) } answers {}
 
-        repository.fetchRandomUsers(onSuccess = {}, onError = {
-            assert(it == "Timeout error")
-        })
+        //Act
+        repository.fetchRandomUsers(successCallback, errorCallback)
+
+        //Assert
+        verify { errorCallback.invoke("Timeout error") }
     }
 }
